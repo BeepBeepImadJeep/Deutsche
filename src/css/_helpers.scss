@@ -1,0 +1,11 @@
+@function vw($desktop-size-px) {
+  @return calc($desktop-size-px * 100 / 1800) + vw;
+}
+
+@function auto-clamp($min-px, $max-px) {
+  @return clamp(#{$min-px + px}, #{vw($max-px)}, #{$max-px + px});
+}
+
+@function auto-calc($min-f-px, $min-d-px, $max-f-px, $max-d-px) {
+  @return calc(#{$min-f-px + px} + (#{$max-f-px} - #{$min-f-px}) * ((100vw - #{$min-d-px + px}) / (#{$max-d-px} - #{$min-d-px})));
+}

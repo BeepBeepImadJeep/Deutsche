@@ -1,0 +1,9 @@
+.idea
+/node_modules
+/.cache
+package-lock.json
+src/.DS_Store
+.DS_Store
+.vscode/settings.json
+gulp/version.json
+/dist

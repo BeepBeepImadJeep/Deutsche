@@ -1,0 +1,25 @@
+version: '3'
+
+networks:
+  web:
+    external: true
+  internal:
+    external: false
+
+services:
+  nginx:
+    container_name: nimax.open-yard-layout.$BRANCH.nginx
+    image: $IMAGE
+    restart: always
+    tty: true
+    volumes:
+      - ${PWD}/config/nginx.conf:/etc/nginx/conf.d/default.conf
+    labels:
+      traefik.enable: true
+      traefik.frontend.rule: Host:${HOST}.d.nimax.ru
+      traefik.port: 80
+      traefik.docker.network: web
+    networks:
+      - web
+      - internal
+

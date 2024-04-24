@@ -1,0 +1,44 @@
+.bread {
+  display: flex;
+  grid-gap: 0 auto-clamp(10, 20);
+  li {
+    display: flex;
+    align-items: center;
+    &:last-child {      
+      width: fit-content;
+      overflow: hidden;
+    }
+    a {
+      display: inline-block;
+      margin-right: auto-clamp(10, 20);
+      color: var(--gray);
+      font-size: auto-clamp(15, 18);
+      font-weight: 400;
+      line-height: 130%;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      width: fit-content;
+      transition: .3s ease;
+      &:hover {
+        color: var(--violet);
+        transition: .3s ease;
+      }
+    }
+    > span {
+      color: var(--black-40);
+      font-size: auto-clamp(15, 18);
+      font-weight: 400;
+      line-height: 130%;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      width: fit-content;
+    }
+    &:last-child {
+      svg {
+        display: none;
+      }
+    }
+  }
+}

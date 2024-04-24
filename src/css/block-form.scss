@@ -1,0 +1,31 @@
+.block {
+  &-form {
+    &__wrap {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding: auto-clamp(20, 40);
+      border-radius: 20px;
+      border: 1px solid var(--black);
+      .content {
+        display: flex;
+        flex-direction: column;
+        grid-gap: 40px 0;
+        h2 {
+          max-width: 505px;
+          margin: 0;
+          color: var(--black);
+          font-size: auto-clamp(26, 40);
+          font-weight: 500;
+          line-height: 120%;
+        }
+        p {
+          max-width: 424px;
+          color: var(--black);
+          font-size: auto-clamp(15, 18);
+          font-weight: 400;
+          line-height: 130%;
+        }
+      }
+    }
+  }
+}
